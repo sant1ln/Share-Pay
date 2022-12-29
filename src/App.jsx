@@ -4,7 +4,6 @@ import { Dashboard } from './page/Dashboard'
 import { Profile } from './page/Profile'
 import { NotFound } from './page/NotFound'
 import { Menu } from './components/Menu'
-import { Detail } from './page/Detail'
 
 function App() {
 
@@ -16,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/dashboard/:slug" element={<Detail/>} />
+          <Route path="/dashboard/:slug" element={<Detail/>}/>
           <Route path="/profile" element={<Profile/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>

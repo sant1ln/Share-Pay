@@ -4,12 +4,16 @@ import { Dashboard } from './page/Dashboard'
 import { Profile } from './page/Profile'
 import { NotFound } from './page/NotFound'
 import { Menu } from './components/Menu'
+import { Detail } from './page/Detail'
+import { Login } from './page/Login'
+import { AuthProvider } from './auth'
 
 function App() {
 
   return (
     <>
       <HashRouter>
+        <AuthProvider>
         <Menu />
 
         <Routes>
@@ -17,8 +21,10 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/dashboard/:slug" element={<Detail/>}/>
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
+        </AuthProvider>
       </HashRouter>
     </>
   )

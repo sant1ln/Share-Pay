@@ -14,6 +14,10 @@ const routes = [
     to: '/profile',
     text: 'profile'
   },
+  {
+    to: '/login',
+    text: 'Login'
+  },
 ]
 
 

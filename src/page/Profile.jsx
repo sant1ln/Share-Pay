@@ -8,7 +8,7 @@ export const Profile = () => {
   return (
     <>
       <div>Profile</div>
-      <p>Bienvenido!, {auth.user?.username}</p>
+      <p>Bienvenido!,{/*  {auth.user?.username} */}</p>
     </>
   )
 }

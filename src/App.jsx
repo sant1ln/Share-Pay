@@ -5,7 +5,8 @@ import { Profile } from './page/Profile'
 import { NotFound } from './page/NotFound'
 import { Detail } from './page/Detail'
 import { Login } from './page/Login'
-import { AuthProvider } from './auth'
+import { AuthProvider } from './context'
+/* import { AuthProvider } from './auth' */
 import { Header } from './components/Header'
 
 function App() {
@@ -14,15 +15,15 @@ function App() {
     <>
       <HashRouter>
         <AuthProvider>
-        <Header/>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/dashboard/:slug" element={<Detail/>}/>
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
+          <Header/>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/dashboard/:slug" element={<Detail/>}/>
+            <Route path="/profile" element={<Profile/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="*" element={<NotFound/>}/>
+          </Routes>
         </AuthProvider>
       </HashRouter>
     </>

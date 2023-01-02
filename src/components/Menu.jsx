@@ -13,7 +13,7 @@ export const Menu = () => {
       <ul className='nav-list'>
         {
           routes.map(({ to: url, text, private:privateRoute}) => {
-            if(privateRoute && !auth.user) return null
+        /*     if(privateRoute && !auth.user) return null */
             
             return (
                 <li 

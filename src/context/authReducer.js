@@ -4,7 +4,7 @@ const initialState = {
   logged: false,
   role: null,
   premium: false,
-  username: null,
+  user: null,
 }
 
 export const authReducer = (state = initialState, action) =>{
@@ -13,12 +13,12 @@ export const authReducer = (state = initialState, action) =>{
         return {
           ...state,
           logged: true,
-          username: action.payload
+          user: action.payload
         };
     case types.logout:
       return {
         logged: false,
-        username: action.payload
+        user: action.payload
       };
     default:
       return state;

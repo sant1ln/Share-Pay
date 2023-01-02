@@ -17,7 +17,7 @@ const init = () => {
   console.log(user)
   return {
     logged: !!user,
-    username: user,
+    user: user,
   }
 }
 
@@ -32,7 +32,7 @@ export const AuthProvider = ({children}) => {
       payload: user
     }
     dispatch(action)
-    localStorage.setItem('user',JSON.stringify(username))
+    localStorage.setItem('user',user)
   }
 
   return (

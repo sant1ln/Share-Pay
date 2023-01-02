@@ -8,8 +8,8 @@ import { AuthContext } from '../context/AuthContext';
 
 export const Header = () => {
 
-  const {authState:{username}} = useContext(AuthContext);
-  
+  const {authState:{user}} = useContext(AuthContext);
+  /* console.log(authState) */
   return (
     <header>
       <section className='header-title'>
@@ -18,7 +18,7 @@ export const Header = () => {
       </section>
       <Menu />
       <section className='header-user'>
-        <span>Hola, {username}</span>
+        <span>Hola, {user}</span>
         <img src={dummyuser} alt="Icono de usuario por defecto" width="20" height="20" />
         <div className='header-popup'>
           <Link to="/login">Cerrar Sesión</Link>

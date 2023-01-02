@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth';
 
 function Login() {
+  const navigate = useNavigate();
   const auth = useAuth();
   const [username, setUsername] = React.useState('');
   
@@ -9,6 +11,13 @@ function Login() {
     e.preventDefault();
     auth.login({ username });
   };
+
+  useEffect(() => {
+    if(auth.user){
+      navigate('/');
+    }
+  }, [])
+  
   
   return (
     <>  

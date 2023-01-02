@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const AuthContext = React.createContext();
+const adminList = ['John','Foo','Doe'];
 
 function AuthProvider({ children }) {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../auth';
-import { routes } from '../core/routes';
+import { routes } from '../router/routes';
 import './styles/menu.css';
 
 export const Menu = () => {

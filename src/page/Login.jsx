@@ -7,22 +7,16 @@ import './styles/login.css'
 
 function Login() {
   const navigate = useNavigate();
-  /* const auth = useAuth(); */
   const { login } = useContext(AuthContext);
-  const [username, setUsername] = React.useState('');
+  const [user, setUser] = React.useState({name:'',password:''});
 
   const onLogin = (e) => {
     e.preventDefault();
-    login(username);
-    navigate('/');
-  };
-
-  /* useEffect(() => {
-    if(auth.user){
+    if(user.name.trim().length > 0 && user.password.trim().length > 0){
+      login(user.name);
       navigate('/');
     }
-  }, []) */
-
+  };
 
   return (
     <section className='login'>
@@ -35,13 +29,15 @@ function Login() {
           <label htmlFor='user'>Usuario</label>
           <input
             id="user"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
+            value={user.name}
+            onChange={e => setUser({...user, name: e.target.value})}
           />
 
           <label htmlFor="password">Contraseña</label>
           <input
             id="password"
+            value={user.password}
+            onChange={e => setUser({...user, password: e.target.value})}
           />
           <Link to="/recovery" className='login-form-recovery'>
             ¿Olvidaste tu contraseña?

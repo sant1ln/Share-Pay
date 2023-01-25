@@ -1,15 +1,15 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Home } from './page/Home'
-import { Dashboard } from './page/Dashboard'
-import { Profile } from './page/Profile'
-import { NotFound } from './page/NotFound'
-import { Detail } from './page/Detail'
-import { Login } from './page/Login'
+import { Home } from './pages/Home'
+import { Dashboard } from './pages/Dashboard'
+import { Profile } from './pages/Profile'
+import { NotFound } from './pages/NotFound'
+import { Detail } from './pages/Detail'
+import { Login } from './pages/Login'
 import { AuthProvider } from './context'
 /* import { AuthProvider } from './auth' */
 import { Header } from './components/Header'
 import { PrivateRoutes } from './router/PrivateRoutes'
-import { Register } from './page/Register'
+import { Register } from './pages/Register'
 
 function App() {
 

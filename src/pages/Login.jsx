@@ -8,7 +8,7 @@ import './styles/login.css'
 function Login() {
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
-  const [user, setUser] = React.useState({name:'',password:''});
+  const [user, setUser] = React.useState({name:'Mr.X',password:'hello friend'});
 
   const onLogin = (e) => {
     e.preventDefault();

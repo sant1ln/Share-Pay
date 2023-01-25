@@ -1,0 +1,21 @@
+.user-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: calc(90vh - 50px);
+  background-color: var(--card-color);
+  color: var(--primary-font-color);
+  border-radius: 10px;
+}
+
+.user-card h2{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--primary-font-color);
+  padding-bottom: 40px;
+}
+
+.user-card p{
+  margin: 0;
+}

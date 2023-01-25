@@ -1,0 +1,14 @@
+.detail-of-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: calc(90vh - 50px);
+  background-color: var(--card-color);
+  color: var(--primary-font-color);
+  border-radius: 10px;
+}
+
+.no-card-selected{
+  font-size: 20px;
+}

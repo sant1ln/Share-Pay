@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  height: 200px;
+  padding-left: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.card img {
+  width: 12%;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.card-number {
+  margin-top: 40px;
+  justify-self: end;
+  font-size: 25px;
+}
+
+.card-user {
+  display: flex;
+  justify-content: space-around;
+}
+
+.premium {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(142deg, rgba(0, 0, 0, 1) 2%, rgba(6, 5, 22, 1) 12%, rgba(3, 2, 41, 1) 21%, rgba(28, 28, 180, 1) 92%);
+}
+
+.gold {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(130deg, rgba(34, 193, 195, 1) 0%, rgba(210, 233, 217, 1) 0%, rgba(237, 223, 90, 1) 0%, rgba(236, 223, 93, 1) 27%, rgba(255, 215, 0, 1) 100%);
+  color: #000;
+}
+
+.platinum {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 1) 0%, rgba(228, 228, 228, 1) 9%, rgba(192, 192, 192, 1) 100%);
+}

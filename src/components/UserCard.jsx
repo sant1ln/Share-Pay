@@ -1,19 +1,12 @@
 import React from 'react'
-import { AuthContext } from '../context/AuthContext';
+import { Card } from './Card';
 import './styles/usercard.css'
 
 export const UserCard = () => {
-
-  const {authState:{user}} = React.useContext(AuthContext);
-
   return (
     <section className='user-card'>
-      <h2>
-        Hola de nuevo, <br /> {user}
-      </h2>
-      <p>Tarjetas principales</p>
-
-      
+      <p>Tus Tarjetas principales</p>
+      <Card />      
     </section>
   )
 }

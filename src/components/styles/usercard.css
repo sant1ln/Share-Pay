@@ -7,6 +7,7 @@
   background-color: var(--card-color);
   color: var(--primary-font-color);
   border-radius: 10px;
+  overflow-y: scroll;
 }
 
 .user-card h2{

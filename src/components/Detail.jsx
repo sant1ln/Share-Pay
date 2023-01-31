@@ -13,7 +13,11 @@ export const Detail = () => {
         Hola de nuevo, <br /> {user}
       </h2>
       <p className='no-card-selected'>Seleciona una tarjeta para ver mas detalles</p> */}
-
+      
+      <div className='card-edit'>
+        <div className='card-edit-front'></div>
+        <div className='card-edit-back'>X</div>        
+      </div>
 
       <form action="">
 

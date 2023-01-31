@@ -1,6 +1,5 @@
 .detail-of-card{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 60%;
@@ -14,17 +13,41 @@
   font-size: 20px;
 }
 
+.card-edit{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-edit-front{
+  width: 90%;
+  height: 200px;
+  background-color: #fff;
+}
+
+.card-edit-back{
+  width: 90%;
+  height: 200px;
+  background-color: #fff;  
+}
+
 form{
-  width: 80%;
-  height: calc(50% - 50px);
+  padding: 5% 0;
+  width: 50%;
+  height: 80%;
 }
 
 form label{
   display: block;
+  font-size: 20px;
   color: var(--secondary-font-color);
 }
 
 form input{
+  width: 60%;
   height: 30px;
   outline: none;
   border: none;

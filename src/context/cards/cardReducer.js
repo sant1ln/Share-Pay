@@ -21,7 +21,8 @@ export const initialCardState = {
   selectedCard: {
     type: 'premium',
     number: '4041 1298 0619 5075',
-    expiration: '02/27'
+    expirationMonth: '02',
+    expirationYear: '27'
   }
 }
 

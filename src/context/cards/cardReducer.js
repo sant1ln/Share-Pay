@@ -4,23 +4,23 @@ export const initialCardState = {
   cards: [
     {
       type: 'premium',
-      number: '4041 5913 0619 5075',
+      number: '4041 5243 0619 5075',
       expiration: '02/27'
     },
     {
       type: 'gold',
-      number: '4041 5913 0619 5075',
+      number: '4041 5373 1619 5075',
       expiration: '02/27'
     },
     {
       type: 'platinum',
-      number: '4041 5913 0619 5075',
+      number: '4921 9833 0619 5075',
       expiration: '02/27'
     },
   ],
   selectedCard: {
     type: 'premium',
-    number: '4041 5913 0619 5075',
+    number: '4041 1298 0619 5075',
     expiration: '02/27'
   }
 }

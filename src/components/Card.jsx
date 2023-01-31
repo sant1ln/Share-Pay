@@ -5,35 +5,18 @@ import platinum_logo from '../assets/icons/card_icon_3.svg'
 import { AuthContext } from '../context/auth/AuthContext';
 import './styles/card.css'
 
-export const Card = () => {
+export const Card = ({ type, number, expiration }) => {
 
   const { authState: { user } } = React.useContext(AuthContext);
+
   return (
     <>
-      <div className='card premium'>
+      <div className='card premium' id={type}>
         <img src={premium_logo} alt="logo_card" />
-        <span className='card-number'>4041 5913 0619 5075</span>
+        <span className='card-number'>{number}</span>
         <div className='card-user'>
           <p>{user}</p>
-          <p>02/27</p>
-        </div>
-      </div>
-
-      <div className='card gold'>
-        <img src={gold_logo} alt="logo_card" />
-        <span className='card-number'>4041 5913 0619 5075</span>
-        <div className='card-user'>
-          <p>{user}</p>
-          <p>02/27</p>
-        </div>
-      </div>
-
-      <div className='card platinum'>
-        <img src={platinum_logo} alt="logo_card" />
-        <span className='card-number'>4041 5913 0619 5075</span>
-        <div className='card-user'>
-          <p>{user}</p>
-          <p>02/27</p>
+          <p>{expiration}</p>
         </div>
       </div>
     </>

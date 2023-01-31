@@ -2,7 +2,7 @@ import React from 'react'
 import premium_logo from '../assets/icons/card_icon_1.svg'
 import gold_logo from '../assets/icons/card_icon_2.svg'
 import platinum_logo from '../assets/icons/card_icon_3.svg'
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/auth/AuthContext';
 import './styles/card.css'
 
 export const Card = () => {

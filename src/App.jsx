@@ -10,6 +10,7 @@ import { AuthProvider } from './context'
 import { Header } from './components/Header'
 import { PrivateRoutes } from './router/PrivateRoutes'
 import { Register } from './pages/Register'
+import { CardProvider } from './context/cards/CardProvider'
 
 function App() {
 
@@ -24,13 +25,15 @@ function App() {
             <Route path="/signin" element={<Register />} />
             <Route path="*" element={
               <PrivateRoutes>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/dashboard/:slug" element={<Detail />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
+                <CardProvider>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/dashboard/:slug" element={<Detail />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </CardProvider>
               </PrivateRoutes>
             } />
           </Routes>

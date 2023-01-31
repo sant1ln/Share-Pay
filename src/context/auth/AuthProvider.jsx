@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { types } from '../types/types'
+import { types } from '../../types/types'
 import { AuthContext } from './AuthContext'
 import { authReducer } from './authReducer'
 

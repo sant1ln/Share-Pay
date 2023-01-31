@@ -1,22 +1,30 @@
 import React from 'react'
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/auth/AuthContext';
+import premium_logo from '../assets/icons/card_icon_1.svg'
 import './styles/detail.css'
+import './styles/card.css'
 
 export const Detail = () => {
 
-  
-  const {authState:{user}} = React.useContext(AuthContext);
+
+  const { authState: { user } } = React.useContext(AuthContext);
 
   return (
-    <section className='detail-of-card'>      
+    <section className='detail-of-card'>
       {/* <h2>
         Hola de nuevo, <br /> {user}
       </h2>
       <p className='no-card-selected'>Seleciona una tarjeta para ver mas detalles</p> */}
-      
+
       <div className='card-edit'>
-        <div className='card-edit-front'></div>
-        <div className='card-edit-back'>X</div>        
+        <div className='card premium'>
+          <img src={premium_logo} alt="logo_card" />
+          <span className='card-number'>4041 5913 0619 5075</span>
+          <div className='card-user'>
+            <p>{user}</p>
+            <p>02/27</p>
+          </div>
+        </div>
       </div>
 
       <form action="">
@@ -30,11 +38,11 @@ export const Detail = () => {
         <label htmlFor="card-number">
           Numero de tarjeta
         </label>
-        <input type="text" placeholder='0000 0000 0000 0000' id="card-number"/>
+        <input type="text" placeholder='0000 0000 0000 0000' id="card-number" />
 
         <div className='card-expiration'>
           <label htmlFor="expiration-date">MM/YY</label>
-          <input type="text" placeholder='MM' id="expiration-date"/>
+          <input type="text" placeholder='MM' id="expiration-date" />
           <input type="text" placeholder='YY' />
         </div>
 
@@ -43,7 +51,7 @@ export const Detail = () => {
         </label>
         <input type="text" name="" id="card-cvc" />
 
-        
+
 
       </form>
 

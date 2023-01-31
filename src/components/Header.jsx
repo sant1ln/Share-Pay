@@ -4,7 +4,7 @@ import './styles/header.css'
 import logoApp from '../assets/icons/logoapp-white.svg';
 import dummyuser from '../assets/icons/dummyprofile-white.svg';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/auth/AuthContext';
 
 export const Header = () => {
 

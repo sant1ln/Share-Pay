@@ -10,11 +10,16 @@ export const Detail = () => {
   const { cardState: { selectedCard } } = useContext(CardContext);
   const { type, number, expirationMonth, expirationYear } = selectedCard;
   const { authState: { user } } = useContext(AuthContext);
+
   const [form, setForm] = useState({
     number: number,
     month: expirationMonth,
     year: expirationYear,
   })
+
+  const handleSubbmit = () => {
+    console.log(from)
+  }
 
   return (
     <section className='detail-of-card'>
@@ -39,30 +44,41 @@ export const Detail = () => {
         <label htmlFor="card-holder">
           Nombre de usario
         </label>
-        <input type="text" value={user} placeholder='Jhon Doe' id="card-holder" />
+        <input type="text" value={user} readOnly placeholder='Jhon Doe' id="card-holder" />
 
 
         <label htmlFor="card-number">
           Numero de tarjeta
         </label>
-        <input 
-          type="text" 
-          value={form.number} 
-          onChange={(e) => setForm({...form, number: e.target.value})}
-          placeholder='0000 0000 0000 0000' 
+        <input
+          type="text"
+          value={form.number}
+          onChange={(e) => setForm({ ...form, number: e.target.value })}
+          placeholder='0000 0000 0000 0000'
           id="card-number"
-          />
+        />
 
         <div className='card-expiration'>
           <label htmlFor="expiration-date">MM/YY</label>
-          <input type="text" value={form.month} placeholder='MM' id="expiration-date" />
-          <input type="text" value={form.year} placeholder='YY' />
+          <input 
+            type="text" 
+            value={form.month}
+            onChange={(e) => setForm({...form,month:e.target.value})}
+            placeholder='MM' 
+            id="expiration-date" />
+          <input 
+            type="text" 
+            value={form.year} 
+            onChange={(e) => setForm({...form,year:e.target.value})}
+            placeholder='YY' />
         </div>
 
         <label htmlFor="card-cvc">
           CVC
         </label>
         <input type="text" name="" id="card-cvc" />
+
+        <button type="submit">Actualizar</button>
 
       </form>
 

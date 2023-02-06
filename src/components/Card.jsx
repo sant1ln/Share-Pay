@@ -12,7 +12,7 @@ export const Card = ({ type, number, expiration }) => {
   return (
     <>
       <div className='card premium' id={type}>
-        <img src={premium_logo} alt="logo_card" />
+        {renderIcon(type)}
         <span className='card-number'>{number}</span>
         <div className='card-user'>
           <p>{user}</p>
@@ -21,4 +21,18 @@ export const Card = ({ type, number, expiration }) => {
       </div>
     </>
   )
+}
+
+
+const renderIcon = (type) => {
+  switch (type) {
+    case 'premium':
+      return (<img src={premium_logo} alt="premium_logo_card" />)
+    case 'gold':
+      return (<img src={gold_logo} alt="gold_logo_card" />)
+    case 'platinum':
+      return (<img src={platinum_logo} alt="platinum_logo_card" />)
+    default:
+      return (<img src={premium_logo} alt="premium_logo_card" />)
+  }
 }
